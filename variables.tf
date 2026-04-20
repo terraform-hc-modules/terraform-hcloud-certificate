@@ -1,45 +1,54 @@
 variable "name" {
-  type = string
+  description = "Name prefix for the certificates."
+  type        = string
 }
 
 variable "labels" {
-  type    = map(string)
-  default = {}
+  description = "Labels to apply to the certificates."
+  type        = map(string)
+  default     = {}
 }
 
 variable "create_managed" {
-  type    = bool
-  default = false
+  description = "Whether to create a managed (Let's Encrypt) certificate."
+  type        = bool
+  default     = false
 }
 
 variable "managed_name" {
-  type    = string
-  default = null
+  description = "Name for the managed certificate. Defaults to name if not set."
+  type        = string
+  default     = null
 }
 
 variable "domain_names" {
-  type    = list(string)
-  default = []
+  description = "List of domain names for the managed certificate."
+  type        = list(string)
+  default     = []
 }
 
 variable "create_uploaded" {
-  type    = bool
-  default = false
+  description = "Whether to create an uploaded certificate."
+  type        = bool
+  default     = false
 }
 
 variable "uploaded_name" {
-  type    = string
-  default = null
+  description = "Name for the uploaded certificate. Defaults to name if not set."
+  type        = string
+  default     = null
 }
 
 variable "certificate" {
-  type      = string
-  default   = ""
-  sensitive = true
+  description = "PEM encoded certificate for uploaded certificate."
+  type        = string
+  default     = ""
+  sensitive   = true
 }
 
 variable "private_key" {
-  type      = string
-  default   = ""
-  sensitive = true
+  description = "PEM encoded private key for uploaded certificate."
+  type        = string
+  default     = ""
+  sensitive   = true
 }

@@ -65,22 +65,22 @@ No resources.
 
 | Name | Description | Type | Default | Required |
 | ---- | ----------- | ---- | ------- | :------: |
-| <a name="input_name"></a> [name](#input\_name) | n/a | `string` | n/a | yes |
-| <a name="input_certificate"></a> [certificate](#input\_certificate) | n/a | `string` | `""` | no |
-| <a name="input_create_managed"></a> [create\_managed](#input\_create\_managed) | n/a | `bool` | `false` | no |
-| <a name="input_create_uploaded"></a> [create\_uploaded](#input\_create\_uploaded) | n/a | `bool` | `false` | no |
-| <a name="input_domain_names"></a> [domain\_names](#input\_domain\_names) | n/a | `list(string)` | `[]` | no |
-| <a name="input_labels"></a> [labels](#input\_labels) | n/a | `map(string)` | `{}` | no |
-| <a name="input_managed_name"></a> [managed\_name](#input\_managed\_name) | n/a | `string` | `null` | no |
-| <a name="input_private_key"></a> [private\_key](#input\_private\_key) | n/a | `string` | `""` | no |
-| <a name="input_uploaded_name"></a> [uploaded\_name](#input\_uploaded\_name) | n/a | `string` | `null` | no |
+| <a name="input_name"></a> [name](#input\_name) | Name prefix for the certificates. | `string` | n/a | yes |
+| <a name="input_certificate"></a> [certificate](#input\_certificate) | PEM encoded certificate for uploaded certificate. | `string` | `""` | no |
+| <a name="input_create_managed"></a> [create\_managed](#input\_create\_managed) | Whether to create a managed (Let's Encrypt) certificate. | `bool` | `false` | no |
+| <a name="input_create_uploaded"></a> [create\_uploaded](#input\_create\_uploaded) | Whether to create an uploaded certificate. | `bool` | `false` | no |
+| <a name="input_domain_names"></a> [domain\_names](#input\_domain\_names) | List of domain names for the managed certificate. | `list(string)` | `[]` | no |
+| <a name="input_labels"></a> [labels](#input\_labels) | Labels to apply to the certificates. | `map(string)` | `{}` | no |
+| <a name="input_managed_name"></a> [managed\_name](#input\_managed\_name) | Name for the managed certificate. Defaults to name if not set. | `string` | `null` | no |
+| <a name="input_private_key"></a> [private\_key](#input\_private\_key) | PEM encoded private key for uploaded certificate. | `string` | `""` | no |
+| <a name="input_uploaded_name"></a> [uploaded\_name](#input\_uploaded\_name) | Name for the uploaded certificate. Defaults to name if not set. | `string` | `null` | no |
 
 ## Outputs
 
 | Name | Description |
 | ---- | ----------- |
-| <a name="output_managed_id"></a> [managed\_id](#output\_managed\_id) | n/a |
-| <a name="output_uploaded_id"></a> [uploaded\_id](#output\_uploaded\_id) | n/a |
+| <a name="output_managed_id"></a> [managed\_id](#output\_managed\_id) | ID of the managed certificate. |
+| <a name="output_uploaded_id"></a> [uploaded\_id](#output\_uploaded\_id) | ID of the uploaded certificate. |
 <!-- END_TF_DOCS -->
 
 ## License
