@@ -1,3 +1,10 @@
+## [0.2.2](https://github.com/terraform-hc-modules/terraform-hcloud-certificate/compare/v0.2.1...v0.2.2) (2026-04-20)
+
+
+### Bug Fixes
+
+* examples now use root module instead of submodules ([9d99e99](https://github.com/terraform-hc-modules/terraform-hcloud-certificate/commit/9d99e996a0d4a4dcc26b51600864cbea8f0ef397))
+
 ## [0.2.1](https://github.com/terraform-hc-modules/terraform-hcloud-certificate/compare/v0.2.0...v0.2.1) (2026-04-20)
 
 
