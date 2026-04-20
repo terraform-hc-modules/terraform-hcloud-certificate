@@ -27,7 +27,7 @@ module "managed_cert" {
 module "uploaded_cert" {
   source = "../../modules/uploaded"
 
-  name = "${local.name}-uploaded"
+  name        = "${local.name}-uploaded"
   certificate = <<-EOT
     -----BEGIN CERTIFICATE-----
     MIIBkTCB+wIJAKHBfLf...
@@ -38,7 +38,7 @@ module "uploaded_cert" {
     MIIEvgIBADANBgkqhki...
     -----END PRIVATE KEY-----
   EOT
-  labels = local.tags
+  labels      = local.tags
 }
 
 output "managed_cert_id" {
