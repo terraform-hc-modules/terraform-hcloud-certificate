@@ -43,7 +43,7 @@ module "cert" {
 
 | Name | Version |
 | ---- | ------- |
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.6 |
 | <a name="requirement_hcloud"></a> [hcloud](#requirement\_hcloud) | >= 1.45 |
 
 ## Providers
@@ -79,8 +79,12 @@ No resources.
 
 | Name | Description |
 | ---- | ----------- |
+| <a name="output_managed"></a> [managed](#output\_managed) | Managed certificate outputs as an object. |
 | <a name="output_managed_id"></a> [managed\_id](#output\_managed\_id) | ID of the managed certificate. |
+| <a name="output_managed_name"></a> [managed\_name](#output\_managed\_name) | Name of the managed certificate. |
+| <a name="output_uploaded"></a> [uploaded](#output\_uploaded) | Uploaded certificate outputs as an object. |
 | <a name="output_uploaded_id"></a> [uploaded\_id](#output\_uploaded\_id) | ID of the uploaded certificate. |
+| <a name="output_uploaded_name"></a> [uploaded\_name](#output\_uploaded\_name) | Name of the uploaded certificate. |
 <!-- END_TF_DOCS -->
 
 ## License
