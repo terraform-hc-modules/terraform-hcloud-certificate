@@ -1,3 +1,10 @@
+# [0.2.0](https://github.com/terraform-hc-modules/terraform-hcloud-certificate/compare/v0.1.0...v0.2.0) (2026-04-20)
+
+
+### Features
+
+* add pre-commit, semantic-release, and improve examples ([b1125a3](https://github.com/terraform-hc-modules/terraform-hcloud-certificate/commit/b1125a3e7b6ecdad41443f80d7b40961f52e6744))
+
 # Changelog
 
 All notable changes to this project will be documented in this file.
