@@ -65,13 +65,13 @@ No resources.
 
 | Name | Description | Type | Default | Required |
 | ---- | ----------- | ---- | ------- | :------: |
+| <a name="input_name"></a> [name](#input\_name) | n/a | `string` | n/a | yes |
 | <a name="input_certificate"></a> [certificate](#input\_certificate) | n/a | `string` | `""` | no |
 | <a name="input_create_managed"></a> [create\_managed](#input\_create\_managed) | n/a | `bool` | `false` | no |
 | <a name="input_create_uploaded"></a> [create\_uploaded](#input\_create\_uploaded) | n/a | `bool` | `false` | no |
 | <a name="input_domain_names"></a> [domain\_names](#input\_domain\_names) | n/a | `list(string)` | `[]` | no |
 | <a name="input_labels"></a> [labels](#input\_labels) | n/a | `map(string)` | `{}` | no |
 | <a name="input_managed_name"></a> [managed\_name](#input\_managed\_name) | n/a | `string` | `null` | no |
-| <a name="input_name"></a> [name](#input\_name) | n/a | `string` | n/a | yes |
 | <a name="input_private_key"></a> [private\_key](#input\_private\_key) | n/a | `string` | `""` | no |
 | <a name="input_uploaded_name"></a> [uploaded\_name](#input\_uploaded\_name) | n/a | `string` | `null` | no |
 
