@@ -1,15 +1,23 @@
-provider "hcloud" {
-  token = var.hcloud_token
+provider "hcloud" {}
+
+locals {
+  name = "ex-${basename(path.cwd)}"
+
+  tags = {
+    Example    = local.name
+    GithubRepo = "terraform-hcloud-certificate"
+    GithubOrg  = "terraform-hc-modules"
+  }
 }
 
-module "managed_certificate" {
+################################################################################
+# Managed Certificate (Let's Encrypt)
+################################################################################
+
+module "certificate" {
   source = "../../modules/managed"
 
-  name         = "example-managed-cert"
+  name         = local.name
   domain_names = ["example.com", "www.example.com"]
-
-  labels = {
-    Environment = "production"
-    ManagedBy   = "terraform"
-  }
+  labels       = local.tags
 }

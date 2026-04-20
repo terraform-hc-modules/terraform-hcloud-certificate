@@ -1,16 +1,37 @@
-provider "hcloud" {
-  token = var.hcloud_token
+provider "hcloud" {}
+
+locals {
+  name = "ex-${basename(path.cwd)}"
+
+  tags = {
+    Example    = local.name
+    GithubRepo = "terraform-hcloud-certificate"
+    GithubOrg  = "terraform-hc-modules"
+  }
+
+  # Example certificate and key (replace with real values)
+  certificate = <<-EOT
+-----BEGIN CERTIFICATE-----
+MIIBkTCB+wIJAKHBfLf...
+-----END CERTIFICATE-----
+EOT
+
+  private_key = <<-EOT
+-----BEGIN PRIVATE KEY-----
+MIIEvgIBADANBgkqhki...
+-----END PRIVATE KEY-----
+EOT
 }
 
-module "uploaded_certificate" {
+################################################################################
+# Uploaded Certificate
+################################################################################
+
+module "certificate" {
   source = "../../modules/uploaded"
 
-  name        = "example-uploaded-cert"
-  certificate = var.certificate
-  private_key = var.private_key
-
-  labels = {
-    Environment = "production"
-    ManagedBy   = "terraform"
-  }
+  name        = local.name
+  certificate = local.certificate
+  private_key = local.private_key
+  labels      = local.tags
 }
