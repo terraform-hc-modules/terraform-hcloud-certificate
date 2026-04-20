@@ -1,3 +1,10 @@
+# [0.3.0](https://github.com/terraform-hc-modules/terraform-hcloud-certificate/compare/v0.2.2...v0.3.0) (2026-04-20)
+
+
+### Features
+
+* improve certificate module validations, outputs, tests ([707cc8a](https://github.com/terraform-hc-modules/terraform-hcloud-certificate/commit/707cc8a04fc684291db53e1316f85b36297d2da7))
+
 ## [0.2.2](https://github.com/terraform-hc-modules/terraform-hcloud-certificate/compare/v0.2.1...v0.2.2) (2026-04-20)
 
 
