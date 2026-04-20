@@ -8,30 +8,32 @@ locals {
     GithubRepo = "terraform-hcloud-certificate"
     GithubOrg  = "terraform-hc-modules"
   }
-
-  # Example certificate and key (replace with real values)
-  certificate = <<-EOT
------BEGIN CERTIFICATE-----
-MIIBkTCB+wIJAKHBfLf...
------END CERTIFICATE-----
-EOT
-
-  private_key = <<-EOT
------BEGIN PRIVATE KEY-----
-MIIEvgIBADANBgkqhki...
------END PRIVATE KEY-----
-EOT
 }
 
 ################################################################################
-# Uploaded Certificate
+# Certificate Module - Uploaded Only (Bring Your Own)
 ################################################################################
 
 module "certificate" {
-  source = "../../modules/uploaded"
+  source = "../../"
 
-  name        = local.name
-  certificate = local.certificate
-  private_key = local.private_key
-  labels      = local.tags
+  name   = local.name
+  labels = local.tags
+
+  create_uploaded = true
+  certificate     = <<-EOT
+    -----BEGIN CERTIFICATE-----
+    MIIBkTCB+wIJAKHBfLf...
+    -----END CERTIFICATE-----
+  EOT
+  private_key     = <<-EOT
+    -----BEGIN PRIVATE KEY-----
+    MIIEvgIBADANBgkqhki...
+    -----END PRIVATE KEY-----
+  EOT
+}
+
+output "certificate_id" {
+  description = "ID of the uploaded certificate"
+  value       = module.certificate.uploaded_id
 }

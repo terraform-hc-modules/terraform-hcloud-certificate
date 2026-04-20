@@ -1,8 +1,25 @@
 provider "hcloud" {}
 
-module "cert" {
-  source = "../../modules/managed"
+locals {
+  name = "ex-${basename(path.cwd)}"
 
-  name         = "ex-simple"
-  domain_names = ["example.com"]
+  tags = {
+    Example    = local.name
+    GithubRepo = "terraform-hcloud-certificate"
+    GithubOrg  = "terraform-hc-modules"
+  }
+}
+
+################################################################################
+# Certificate Module - Simple Managed Certificate
+################################################################################
+
+module "certificate" {
+  source = "../../"
+
+  name   = local.name
+  labels = local.tags
+
+  create_managed = true
+  domain_names   = ["example.com"]
 }

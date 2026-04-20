@@ -11,40 +11,39 @@ locals {
 }
 
 ################################################################################
-# Certificate Module - Complete (Managed + Uploaded)
+# Certificate Module - Both Managed and Uploaded
 ################################################################################
 
-# Managed certificate (Let's Encrypt)
-module "managed_cert" {
-  source = "../../modules/managed"
+module "certificates" {
+  source = "../../"
 
-  name         = "${local.name}-managed"
-  domain_names = ["example.com", "*.example.com"]
-  labels       = local.tags
-}
+  name   = local.name
+  labels = local.tags
 
-# Uploaded certificate (bring your own)
-module "uploaded_cert" {
-  source = "../../modules/uploaded"
+  # Create a managed certificate (Let's Encrypt)
+  create_managed = true
+  domain_names   = ["example.com", "*.example.com"]
 
-  name        = "${local.name}-uploaded"
-  certificate = <<-EOT
+  # Also create an uploaded certificate
+  create_uploaded = true
+  certificate     = <<-EOT
     -----BEGIN CERTIFICATE-----
     MIIBkTCB+wIJAKHBfLf...
     -----END CERTIFICATE-----
   EOT
-  private_key = <<-EOT
+  private_key     = <<-EOT
     -----BEGIN PRIVATE KEY-----
     MIIEvgIBADANBgkqhki...
     -----END PRIVATE KEY-----
   EOT
-  labels      = local.tags
 }
 
 output "managed_cert_id" {
-  value = module.managed_cert.id
+  description = "ID of the managed certificate"
+  value       = module.certificates.managed_id
 }
 
 output "uploaded_cert_id" {
-  value = module.uploaded_cert.id
+  description = "ID of the uploaded certificate"
+  value       = module.certificates.uploaded_id
 }

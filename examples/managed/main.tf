@@ -11,13 +11,20 @@ locals {
 }
 
 ################################################################################
-# Managed Certificate (Let's Encrypt)
+# Certificate Module - Managed Only (Let's Encrypt)
 ################################################################################
 
 module "certificate" {
-  source = "../../modules/managed"
+  source = "../../"
 
-  name         = local.name
-  domain_names = ["example.com", "www.example.com"]
-  labels       = local.tags
+  name   = local.name
+  labels = local.tags
+
+  create_managed = true
+  domain_names   = ["example.com", "www.example.com"]
+}
+
+output "certificate_id" {
+  description = "ID of the managed certificate"
+  value       = module.certificate.managed_id
 }
