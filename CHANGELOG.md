@@ -1,3 +1,10 @@
+## [0.2.1](https://github.com/terraform-hc-modules/terraform-hcloud-certificate/compare/v0.2.0...v0.2.1) (2026-04-20)
+
+
+### Bug Fixes
+
+* add descriptions to variables and outputs ([c0a0dd8](https://github.com/terraform-hc-modules/terraform-hcloud-certificate/commit/c0a0dd8295fb3c1ed6716b1c6f0cb1d61ad9c325))
+
 # [0.2.0](https://github.com/terraform-hc-modules/terraform-hcloud-certificate/compare/v0.1.0...v0.2.0) (2026-04-20)
 
 
