@@ -60,4 +60,3 @@ run "uploaded_ok_minimal" {
     private_key     = "-----BEGIN PRIVATE KEY-----\nabc\n-----END PRIVATE KEY-----"
   }
 }
-

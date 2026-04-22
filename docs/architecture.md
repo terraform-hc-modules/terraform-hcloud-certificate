@@ -31,4 +31,3 @@ flowchart TB
 - Use **managed certificates** for public domains where Let's Encrypt validation is viable.
 - Use **uploaded certificates** when you already have a certificate chain and key material.
 - For **load balancers**, you typically attach certificate IDs to the load balancer HTTPS service.
-

@@ -15,7 +15,8 @@ locals {
 ################################################################################
 
 module "network" {
-  source = "terraform-hc-modules/network/hcloud"
+  source  = "terraform-hc-modules/network/hcloud"
+  version = "~> 0.1"
 
   name   = local.name
   labels = local.tags
@@ -78,4 +79,3 @@ output "load_balancer_id" {
 output "managed_certificate_id" {
   value = module.certificate.managed_id
 }
-
