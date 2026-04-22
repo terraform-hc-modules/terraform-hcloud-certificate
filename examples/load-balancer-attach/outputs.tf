@@ -3,4 +3,3 @@ output "managed" {
   value       = module.certificate.managed
   sensitive   = true
 }
-
