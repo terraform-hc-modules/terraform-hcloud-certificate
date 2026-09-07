@@ -43,10 +43,10 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 | ---- | ----------- | ---- | ------- | :------: |
-| <a name="input_create"></a> [create](#input\_create) | Whether to create the managed certificate. | `bool` | `true` | no |
 | <a name="input_domain_names"></a> [domain\_names](#input\_domain\_names) | Domain names for the managed certificate. | `list(string)` | n/a | yes |
-| <a name="input_labels"></a> [labels](#input\_labels) | Labels to apply. | `map(string)` | `{}` | no |
 | <a name="input_name"></a> [name](#input\_name) | Name of the managed certificate. | `string` | n/a | yes |
+| <a name="input_create"></a> [create](#input\_create) | Whether to create the managed certificate. | `bool` | `true` | no |
+| <a name="input_labels"></a> [labels](#input\_labels) | Labels to apply. | `map(string)` | `{}` | no |
 
 ## Outputs
 
