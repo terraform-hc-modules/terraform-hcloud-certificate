@@ -10,29 +10,27 @@ jobs:
     with:
       working_directory: './examples/complete/'
       provider: none
+
   load-balancer-attach-example:
     uses: clouddrove/github-shared-workflows/.github/workflows/tf-checks.yml@v2
     with:
       working_directory: './examples/load-balancer-attach/'
       provider: none
+
   managed-example:
     uses: clouddrove/github-shared-workflows/.github/workflows/tf-checks.yml@v2
     with:
       working_directory: './examples/managed/'
       provider: none
+
   simple-example:
     uses: clouddrove/github-shared-workflows/.github/workflows/tf-checks.yml@v2
     with:
       working_directory: './examples/simple/'
       provider: none
+
   uploaded-example:
     uses: clouddrove/github-shared-workflows/.github/workflows/tf-checks.yml@v2
     with:
       working_directory: './examples/uploaded/'
       provider: none
-
-  # Separate job for the TFLint workflow call
-  tf-lint:
-    uses: clouddrove/github-shared-workflows/.github/workflows/tf-lint.yml@v2
-    secrets:
-      GITHUB: ${{ secrets.GITHUB || github.token }}
