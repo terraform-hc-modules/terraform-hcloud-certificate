@@ -44,10 +44,10 @@ No modules.
 | Name | Description | Type | Default | Required |
 | ---- | ----------- | ---- | ------- | :------: |
 | <a name="input_certificate"></a> [certificate](#input\_certificate) | PEM encoded certificate. | `string` | n/a | yes |
-| <a name="input_create"></a> [create](#input\_create) | Whether to create the uploaded certificate. | `bool` | `true` | no |
-| <a name="input_labels"></a> [labels](#input\_labels) | Labels to apply. | `map(string)` | `{}` | no |
 | <a name="input_name"></a> [name](#input\_name) | Name of the uploaded certificate. | `string` | n/a | yes |
 | <a name="input_private_key"></a> [private\_key](#input\_private\_key) | PEM encoded private key. | `string` | n/a | yes |
+| <a name="input_create"></a> [create](#input\_create) | Whether to create the uploaded certificate. | `bool` | `true` | no |
+| <a name="input_labels"></a> [labels](#input\_labels) | Labels to apply. | `map(string)` | `{}` | no |
 
 ## Outputs
 
