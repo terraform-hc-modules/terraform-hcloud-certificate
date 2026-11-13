@@ -1,3 +1,9 @@
+## [0.4.2](https://github.com/terraform-hc-modules/terraform-hcloud-certificate/compare/v0.4.1...v0.4.2) (2026-11-13)
+
+### Documentation
+
+* README badge shows Terraform `>= 1.10`, matching the module's `required_version` ([#10](https://github.com/terraform-hc-modules/terraform-hcloud-certificate/pull/10), closes [#9](https://github.com/terraform-hc-modules/terraform-hcloud-certificate/issues/9))
+
 # [0.3.0](https://github.com/terraform-hc-modules/terraform-hcloud-certificate/compare/v0.2.2...v0.3.0) (2026-04-20)
 
 
